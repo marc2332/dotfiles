@@ -3,20 +3,17 @@ local wezterm = require('wezterm')
 return {
   enable_scroll_bar = true,
   default_prog = { "nu" },
-  color_scheme = "Gruvbox Dark",
+  color_scheme = "Brogrammer (Gogh)",
   use_fancy_tab_bar = true,
-  font = wezterm.font("JetBrains Mono", { weight = 'Bold' }),
+  font = wezterm.font("Cascadia Mono NF"),
   window_padding = {
-    left = 24,
-    right = 24,
-    top = 24,
-    bottom = 10,
+    left = 5,
+    right = 5,
+    top = 5,
+    bottom = 5,
   },
   window_decorations = "RESIZE",
-  tab_max_width = 24,
-  colors = {
-    background = '#282828',
-  },
+  tab_max_width = 26,
   keys = {
     {
       key = '-',
@@ -28,11 +25,11 @@ return {
       mods = 'ALT',
       action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
     },
-	{
-	  key = 'ç',
-	  mods = 'ALT',
-	  action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
-	},
+	  {
+	    key = 'ç',
+	    mods = 'ALT',
+	    action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+	  },
     {
       key = 'RightArrow',
       mods = 'ALT|SHIFT',
