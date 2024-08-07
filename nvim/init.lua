@@ -1,16 +1,15 @@
 require("plugins")
 require("remap")
-require("telescope")
-print("telescope not loaded")
+require("telescope-config")
 require("nvim-tree").setup()
 
 -- Just some tweaks for neovide
 vim.o.guifont = "JetBrains Mono:h12"
 vim.g.neovide_refresh_rate = 60
+vim.g.neovide_scale_factor = 1
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-vim.o.smartident = true
 vim.opt.termguicolors = true
 vim.o.background = "dark"
 vim.cmd([[colorscheme tokyonight]])

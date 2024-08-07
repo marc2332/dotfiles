@@ -20,12 +20,12 @@ end)
 local counter = 1.0
 
 vim.keymap.set("n", "<C-g>", function()
-	counter = counter + 0.25
+	counter = counter + 0.10
 	vim.g.neovide_scale_factor = counter
 end)
 
 vim.keymap.set("n", "<C-f>", function()
-	counter = counter - 0.25
+	counter = counter - 0.10
 	vim.g.neovide_scale_factor = counter
 end)
 
