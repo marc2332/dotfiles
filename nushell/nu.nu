@@ -2,7 +2,7 @@ def --env gittd [name: string] {
     let main_branch = "main"
 
     let line = (git worktree list --verbose | lines | where ($it | str contains $main_branch) | first)
-    
+
     if $line != "" {
         let path = ($line | split row " " | first)
         cd $path
@@ -19,7 +19,7 @@ def --env gittm [] {
     let main_branch = "main"
 
     let line = (git worktree list --verbose | lines | where ($it | str contains $main_branch) | first)
-    
+
     if $line != "" {
         let path = ($line | split row " " | first)
         print $"☄️ Switching to main branch."
@@ -34,7 +34,7 @@ def --env gittn [name: string] {
     let dir = $"../($dirname)"
 
     if (git branch --list $name | is-empty) {
-        print $"🎯 Creating ($name)" 
+        print $"🎯 Creating ($name)"
         git worktree add -b $name $dir
 
         print $"⚡️ Moving to ($name)"
@@ -68,7 +68,7 @@ def --env gittc [num: int] {
     let dir = $"../($dirname)"
 
     if not ($dir | path exists) {
-        print $"🎯 Checking ($name)" 
+        print $"🎯 Checking ($name)"
         git worktree add -b $name $dir
 
         print $"⚡️ Moving to ($name)"
@@ -93,7 +93,7 @@ alias gitt = git worktree list
 alias gitbranch = git switch
 alias gitbranchnew = git switch -c
 alias gita = git add -A
-alias gitc = git commit -m 
+alias gitc = git commit -m
 alias gitpull = git pull origin $"(git branch --show-current)"
 alias gitpush = git push origin $"(git branch --show-current)"
 
@@ -102,7 +102,11 @@ alias pp = cd $"($env.HOME)/Projects"
 
 export-env {
     $env.PROMPT_COMMAND = { ||
-        let cwd = $env.PWD | path basename 
+        let cwd = if ($env.PWD | str starts-with $nu.home-dir) {
+            $env.PWD | str replace $nu.home-dir "~"
+        } else {
+            $env.PWD
+        }
         let name = $env.USERNAME
         let branch = do { git branch --show-current } | complete
         let git_status = if $branch.exit_code == 0 and $branch.stdout != "" {
@@ -110,10 +114,14 @@ export-env {
         } else {
             "\n"
         }
-        $"(ansi yellow)($name) (ansi white)➜ (ansi green)($cwd)($git_status)"
+        $"(ansi green)($name) (ansi white)➜ (ansi yellow)($cwd)($git_status)"
     }
 
     $env.PROMPT_COMMAND_RIGHT = { ||
         ""
+    }
+
+    $env.PROMPT_INDICATOR = {||
+        $"(ansi white)➜ "
     }
 }
