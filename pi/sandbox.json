@@ -2,10 +2,14 @@
   "enabled": true,
   "sandboxUserShell": true,
   "permissionPromptTimeoutSeconds": 600,
+  "network": {
+    "allowedDomains": ["*"],
+    "deniedDomains": []
+  },
   "filesystem": {
-    "denyRead": ["/home/marc"],
-    "allowRead": ["/home/marc/Projects", "/home/marc/.pi", "/home/marc/.config/dotfiles", "/home/marc/.cargo", "/tmp"],
-    "allowWrite": ["/home/marc/Projects", "/home/marc/.pi", "/home/marc/.config/dotfiles", "/tmp"],
-    "denyWrite": [".env", ".env.*", "*.pem", "*.key"]
+    "denyRead": ["/home/marc/.config"],
+    "allowRead": ["/home/marc", "/home/marc/.config/dotfiles"],
+    "allowWrite": ["/home/marc", "/home/marc/.config/dotfiles"],
+    "denyWrite": ["/home/marc/.config", ".env", ".env.*", "*.pem", "*.key"]
   }
 }
