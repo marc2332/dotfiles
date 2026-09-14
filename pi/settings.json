@@ -10,7 +10,8 @@
   ],
   "skills": [
     "/home/marc/.config/dotfiles/.claude/skills/tidyup",
-    "/home/marc/Projects/freya/trunk/plugins/freya/skills/freya"
+    "/home/marc/Projects/freya/trunk/plugins/freya/skills/freya",
+    "/home/marc/Projects/marcgit/trunk/plugins/marcgit/skills/marcgit"
   ],
   "theme": "golden-dusk",
   "terminal": {

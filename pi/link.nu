@@ -1,9 +1,6 @@
-# Link the Pi configuration managed by this dotfiles repository.
-# Existing files are moved to a .bak file before they are replaced.
-
 def link-managed [source: path, target: path] {
     let source = ($source | path expand)
-    let target = ($target | path expand)
+    let target = $target
     let parent = ($target | path dirname)
 
     if not ($source | path exists) {
@@ -13,7 +10,6 @@ def link-managed [source: path, target: path] {
 
     mkdir $parent
 
-    # readlink succeeds only when the target is already a symbolic link.
     let link = (do { ^readlink $target } | complete)
     if $link.exit_code == 0 {
         let current = ($link.stdout | str trim | path expand)
@@ -41,5 +37,6 @@ let repo = ($pi_config | path dirname)
 let pi_dir = ($env.HOME | path join ".pi" "agent")
 
 link-managed ($pi_config | path join "settings.json") ($pi_dir | path join "settings.json")
+link-managed ($pi_config | path join "AGENTS.md") ($pi_dir | path join "AGENTS.md")
 link-managed ($pi_config | path join "extensions") ($pi_dir | path join "extensions")
 link-managed ($repo | path join ".claude" "skills" "tidyup") ($pi_dir | path join "skills" "tidyup")
