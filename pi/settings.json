@@ -1,0 +1,31 @@
+{
+  "lastChangelogVersion": "0.85.1",
+  "defaultProvider": "github-copilot",
+  "defaultModel": "gpt-5.6-luna",
+  "packages": [
+    "npm:pi-powerline-footer",
+    "npm:pi-web-access",
+    "npm:awesome-pi-themes",
+    "npm:pi-sandbox"
+  ],
+  "skills": [
+    "/home/marc/.config/dotfiles/.claude/skills/tidyup",
+    "/home/marc/Projects/freya/trunk/plugins/freya/skills/freya"
+  ],
+  "theme": "golden-dusk",
+  "terminal": {
+    "showTerminalProgress": false
+  },
+  "tuiMode": "regular",
+  "enableInstallTelemetry": false,
+  "quietStartup": true,
+  "powerline": {
+    "disabledSegments": [
+      "path",
+      "cache_read",
+      "cost",
+      "extension_statuses"
+    ]
+  },
+  "hideThinkingBlock": true
+}
