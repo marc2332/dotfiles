@@ -1,5 +1,5 @@
 ---
-name: tidy up
+name: tidy-up
 description: Tidy up the code.
 ---
 
