@@ -10,6 +10,7 @@
   ],
   "skills": [
     "/home/marc/.config/dotfiles/.claude/skills/tidyup",
+    "/home/marc/.config/dotfiles/.claude/skills/github-gh-cli",
     "/home/marc/Projects/freya/trunk/plugins/freya/skills/freya",
     "/home/marc/Projects/marcgit/trunk/plugins/marcgit/skills/marcgit"
   ],

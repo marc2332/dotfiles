@@ -37,6 +37,7 @@ let repo = ($pi_config | path dirname)
 let pi_dir = ($env.HOME | path join ".pi" "agent")
 
 link-managed ($pi_config | path join "settings.json") ($pi_dir | path join "settings.json")
+link-managed ($pi_config | path join "sandbox.json") ($pi_dir | path join "sandbox.json")
 link-managed ($pi_config | path join "AGENTS.md") ($pi_dir | path join "AGENTS.md")
 link-managed ($pi_config | path join "extensions") ($pi_dir | path join "extensions")
 link-managed ($repo | path join ".claude" "skills" "tidyup") ($pi_dir | path join "skills" "tidyup")

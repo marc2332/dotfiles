@@ -1,0 +1,11 @@
+{
+  "enabled": true,
+  "sandboxUserShell": true,
+  "permissionPromptTimeoutSeconds": 600,
+  "filesystem": {
+    "denyRead": ["/home/marc"],
+    "allowRead": ["/home/marc/Projects", "/home/marc/.pi", "/home/marc/.config/dotfiles", "/home/marc/.cargo", "/tmp"],
+    "allowWrite": ["/home/marc/Projects", "/home/marc/.pi", "/home/marc/.config/dotfiles", "/tmp"],
+    "denyWrite": [".env", ".env.*", "*.pem", "*.key"]
+  }
+}
