@@ -6,7 +6,8 @@
     "npm:pi-powerline-footer",
     "npm:pi-web-access",
     "npm:awesome-pi-themes",
-    "npm:pi-sandbox"
+    "npm:pi-sandbox",
+    "npm:pi-review"
   ],
   "skills": [
     "/home/marc/.config/dotfiles/.claude/skills/tidyup",
