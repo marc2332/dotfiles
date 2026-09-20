@@ -8,7 +8,7 @@
     "npm:awesome-pi-themes",
     "npm:pi-sandbox",
     "npm:pi-review",
-    "npm:pi-chatgpt-limit"
+    "npm:pi-codex-usage"
   ],
   "skills": [
     "/home/marc/.config/dotfiles/.claude/skills/tidyup",
