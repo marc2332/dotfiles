@@ -1,13 +1,14 @@
 {
   "lastChangelogVersion": "0.85.1",
-  "defaultProvider": "opencode-go",
-  "defaultModel": "gpt-5.6-luna",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.6-terra",
   "packages": [
     "npm:pi-powerline-footer",
     "npm:pi-web-access",
     "npm:awesome-pi-themes",
     "npm:pi-sandbox",
-    "npm:pi-review"
+    "npm:pi-review",
+    "npm:pi-chatgpt-limit"
   ],
   "skills": [
     "/home/marc/.config/dotfiles/.claude/skills/tidyup",
