@@ -180,7 +180,7 @@
     "deniedDomains": []
   },
   "filesystem": {
-    "allowRead": ["/home/marc", "/home/marc/.config/dotfiles", "/tmp"],
+    "allowRead": ["/home/marc", "/home/marc/.config/dotfiles", "/nix", "/tmp"],
     "allowWrite": ["/home/marc", "/home/marc/.config/dotfiles", "/tmp"],
     "denyWrite": [".env", ".env.*", "*.pem", "*.key"]
   }
