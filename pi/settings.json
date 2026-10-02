@@ -1,14 +1,15 @@
 {
-  "lastChangelogVersion": "0.87.1",
+  "lastChangelogVersion": "1.0.0",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-6-sol",
+  "defaultModel": "gpt-6.1-sol",
   "packages": [
     "npm:pi-powerline-footer",
     "npm:pi-web-access",
     "npm:awesome-pi-themes",
     "npm:pi-sandbox",
     "npm:pi-review",
-    "npm:pi-codex-usage"
+    "npm:pi-codex-usage",
+    "npm:pi-subagents"
   ],
   "skills": [
     "/home/marc/.config/dotfiles/.claude/skills/tidyup",
@@ -31,5 +32,5 @@
       "extension_statuses"
     ]
   },
-  "hideThinkingBlock": true
+  "hideThinkingBlock": false
 }
