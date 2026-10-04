@@ -43,6 +43,8 @@
       "*.jsr.io",
       "bun.sh",
       "*.bun.sh",
+      "nixos.org",
+      "*.nixos.org",
       "crates.io",
       "*.crates.io",
       "static.crates.io",
