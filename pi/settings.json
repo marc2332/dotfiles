@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "1.0.0",
+  "lastChangelogVersion": "1.0.4",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-6.1-sol",
   "packages": [
@@ -32,5 +32,6 @@
       "extension_statuses"
     ]
   },
-  "hideThinkingBlock": false
+  "hideThinkingBlock": true,
+  "deviceId": "c1fefc5a-0f3d-41b1-be43-34f9d759a704"
 }
