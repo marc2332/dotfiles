@@ -107,7 +107,7 @@ export-env {
         } else {
             $env.PWD
         }
-        let name = $env.USERNAME
+        let name = $env.USERNAME? | default $env.USER? | default { whoami }
         let branch = do { git branch --show-current } | complete
         let git_status = if $branch.exit_code == 0 and $branch.stdout != "" {
             $"(ansi white) ➜(ansi aqua) \u{eafe} ($branch.stdout)"
