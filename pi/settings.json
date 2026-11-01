@@ -7,7 +7,9 @@
     "npm:pi-web-access",
     {
       "source": "npm:awesome-pi-themes",
-      "themes": ["!themes/codex-slate.json"]
+      "themes": [
+        "!themes/codex-slate.json"
+      ]
     },
     "npm:pi-sandbox",
     "npm:pi-review",
@@ -35,6 +37,6 @@
       "extension_statuses"
     ]
   },
-  "hideThinkingBlock": true,
+  "hideThinkingBlock": false,
   "deviceId": "c1fefc5a-0f3d-41b1-be43-34f9d759a704"
 }
