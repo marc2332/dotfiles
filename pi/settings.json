@@ -39,7 +39,7 @@
       "extension_statuses"
     ]
   },
-  "hideThinkingBlock": true,
+  "hideThinkingBlock": false,
   "deviceId": "c1fefc5a-0f3d-41b1-be43-34f9d759a704",
   "extensionChangelogVersions": {
     "{\"source\":\"npm:pi-powerline-footer\",\"scope\":\"user\"}": "0.22.0",

@@ -24,3 +24,6 @@ Dont also write justifications, reasoning or thinking on them, always write what
 # Freya
 When working with Freya GUI Library and you are modifying UI look into using freya-testing to test your changes and assert they work, 
 only skip this if the change is trivial.
+
+# Naming
+- When working on CVE-style branches make sure to name them with the appropiate naming like fix/audit-cev123-edv432.
