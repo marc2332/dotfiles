@@ -10,6 +10,8 @@ description: Tidy up the code.
 - Add documentation comments where needed.
 - Dont leave anything undone unless told so.
 - Always try to have methods attached to their respective data types (classes, structs, enums) rather than be random functions taking its data type as first argument.
+- Prefer a read-only accessor over a predicate tailored to one caller. Let the data owner expose what it knows and the caller decide what to do with it.
+  - For example, prefer `label() -> Option<&str>` over a caller-specific `matches_label(expected)`. The caller can compare the borrowed label without copying it, and `None` stays distinct from `Some("")`.
 - Analyze the code to see if you can reuse existing types rather than creating new ones.
 - Leave empty lines between different regions in the code logic to make it more readable.
 - Looks for unnecessary and trivial clones or copies of values.
